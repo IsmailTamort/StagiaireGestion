@@ -1,0 +1,34 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   <a class="navbar-brand" style="color:white;">Gestion des stagiaires</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   &nbsp;
+         &nbsp;
+         &nbsp;
+   <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+            <a class="nav-link" (click)="onOpenModal(null, 'add')">Ajouter Stagiaire <span class="sr-only">(current)</span></a>
+         </li>
+        
+         
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+         <input type="search" (ngModelChange)="searchStagiaires(key.value)" #key="ngModel" ngModel
+          name="key" id="searchName" class="form-control mr-sm-2" placeholder="Chercher stagiaires..." required>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+               <a routerLink="login" class="nav-link">Se déconnecter <span class="sr-only">(current)</span></a>
+            </li>
+            </ul>
+           
+      </form>
+      
+      
+   </div>
+ </nav>

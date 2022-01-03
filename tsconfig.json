@@ -6,7 +6,9 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns":true,
+    "noImplicitAny":false,
+    "strictPropertyInitialization": false,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -16,15 +18,24 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+   
     "lib": [
       "es2018",
       "dom"
     ]
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true,
+    
+    /*HAJAAAAR LI L9AT L7EL L HADI*/
+    "strictNullChecks" : false,
+    
+  }
+
+}
+/*"enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
-}
+    */
