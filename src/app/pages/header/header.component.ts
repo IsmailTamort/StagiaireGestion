@@ -16,7 +16,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(private stagiaireService: StagiaireService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getStagiaires()
+  }
 
   /*
 add stagiaire 
@@ -48,8 +50,11 @@ add stagiaire
         stagiaire.competence.toLowerCase().indexOf(key.toLowerCase()) !== -1
       ) {
         results.push(stagiaire);
+        console.log(results);
+        
       }
     }
+    console.log("dddddddd",results);
     this.stagiaires = results;
     if (results.length === 0 || !key) {
       this.getStagiaires();

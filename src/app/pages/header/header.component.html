@@ -79,7 +79,7 @@
                   <div class="modal-footer">
                      <button type="button" id="add-stagiaire-form" class="btn btn-secondary"
                         data-dismiss="modal">Close</button>
-                     <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Souvegarder</button>
+                     <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary">Sauvegarder</button>
                   </div>
                </form>
             </div>
@@ -87,3 +87,4 @@
       </div>
    </div>
 </nav>
+<app-stagiaires-liste [stagiaires]="stagiaires"></app-stagiaires-liste>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { Stagiaire } from '../../stagiaire';
@@ -9,14 +9,14 @@ import { StagiaireService } from '../../stagiaire.service';
   styleUrls: ['./stagiaires-liste.component.css'],
 })
 export class StagiairesListeComponent implements OnInit {
-  public stagiaires: Stagiaire[];
   public editStagiaire: Stagiaire;
   public deleteStagiaire: Stagiaire;
+  @Input() stagiaires : Stagiaire[]
 
   constructor(private stagiaireService: StagiaireService) {}
 
   ngOnInit() {
-    this.getStagiaires();
+    //this.getStagiaires();
   }
   public getStagiaires(): void {
     this.stagiaireService.getStagiaires().subscribe(
